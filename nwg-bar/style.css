@@ -1,0 +1,53 @@
+window {
+	background-color: rgba (0, 0, 0, 0);
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 15px;
+	border-width: 5px;
+	border: solid;
+	border-color: rgba(200, 130, 180, 1);
+}
+
+/* Outer bar container, takes all the window width/height */
+#outer-box {
+	margin: 0px;
+	border-radius: 15px;
+	background: rgba(50, 40, 50, 0.8);
+	border: solid;
+	border-width: 1px;
+	border-color: rgba(150, 100, 150, 1);
+}
+
+/* Inner bar container, surrounds buttons */
+#inner-box {
+	/* background-color: rgba (0, 0, 0, 0.85); */
+	border-radius: 10px;
+	border-style: none;
+	border-width: 1px;
+	border-color: rgba (156, 142, 122, 0.7);
+	padding: 5px;
+	margin: 5px
+}
+
+button,
+image {
+	background: none;
+	border: none;
+	box-shadow: none
+}
+
+
+button {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 5px;
+	color: #ccc;
+	text-decoration: none;
+	text-shadow: none;
+	font-weight: bold;
+}
+
+
+button:hover {
+	/* background-color: rgba (255, 255, 255, 0.1) */
+	background-color: rgba(60, 50, 60, 1);
+}
