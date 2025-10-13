@@ -11,8 +11,8 @@
     // "modules-center": ["clock"],
     // "modules-right": ["network", "bluetooth", "temperature","custom/power_profile","battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
     "modules-center":["clock", "battery"],
-    "modules-right":["hyprland/workspaces"],
-    "modules-left": ["network", "bluetooth", "temperature","pulseaudio","tray" ],
+    "modules-right":["custom/powermenu","hyprland/workspaces"],
+    "modules-left": ["network", "bluetooth", "custom/avgtemp","pulseaudio","tray" ],
     "hyprland/window": {
         "format": "{}"
     },
@@ -52,9 +52,13 @@
         "interval": 1,
         // "format": " {:%H:%M  %a, %d/%m/%Y}",
         "format": "{:%a %d/%m/%Y %H:%M}",
-
+        // "on-click": "exec hyprlock",
         // "format":"<span color='#aaaaaa'><span color='#ffffff'>{:%I:%M</span> %p}</span>",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "custom/powermenu":{
+        "format": "⊝",
+        "on-click": "exec nwg-bar"
     },
 
     "backlight": {
@@ -113,6 +117,11 @@
         "format": "{temperatureC}°C",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C"
+    },
+    "custom/avgtemp":{
+        "exec": "/usr/local/bin/avgtemp",
+        "interval": 5,
+        "format": "{}"
     },
 
     "network": {

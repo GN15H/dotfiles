@@ -10,20 +10,19 @@
 }
 
 window#waybar {
-    background: rgba(30, 30, 29, 0.95);
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    background: rgba(30, 30, 29, 0.85);
     border-bottom: solid;
-    border-bottom-color: rgba(117, 113, 92, 0.9);
-    border-width: 2px;
+    border-top: solid;
+    border-bottom-color: rgba(80, 70, 50, 0.8);
+    border-top-color: rgba(80, 70, 50, 0.8);
+    border-width: 1px;
     padding-bottom: 4px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-top: 10px;
     color: #cdd6f4;
-    /* box-shadow: 10px 10px 10px 10px black; */
 }
 
 tooltip {
+    margin-top: 20px;
     background: rgba(77, 50, 77, 1);
     border-radius: 10px;
     border-width: 6px;
@@ -68,8 +67,10 @@ tooltip {
 #network,
 #bluetooth,
 #temperature,
+#custom-avgtemp,
 #workspaces,
 #tray,
+#custom-powermenu,
 #backlight {
     color: rgba(243, 238, 234, 0.8);
     /* background: rgba(16, 16, 15, 0.2); */
@@ -82,9 +83,14 @@ tooltip {
     border-left-width: 1px;
     border-right-width: 1px;
     border-color: rgba(117, 113, 92, 0.7);
+    border-radius: 10px;
 }
 
 #temperature {
+    border-radius: 10px 0px 0px 10px;
+}
+
+#custom-avgtemp {
     border-radius: 10px 0px 0px 10px;
 }
 
@@ -151,6 +157,8 @@ tooltip {
 #pulseaudio {
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
     /* color: #89b4fa; */
     /* border-left: 0px; */
     /* border-right: 0px; */
