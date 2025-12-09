@@ -41,5 +41,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-
-
+vim.diagnostic.config {
+  virtual_text = true, -- Enable inline virtual text for diagnostics
+  -- Other options like severity_sort, float, etc. can be configured here
+}
