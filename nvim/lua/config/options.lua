@@ -1,9 +1,14 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
-vim.opt.shiftwidth = 4
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+
+vim.opt.shiftwidth = 2
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.softtabstop = 2
+vim.o.expandtab = true
 
 vim.o.breakindent = true
 vim.o.undofile = true
