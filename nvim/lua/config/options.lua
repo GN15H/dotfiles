@@ -24,7 +24,7 @@ vim.o.timeoutlen = 300
 -- vim.o.list = true
 -- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 --
-vim.o.inccommand = 'split'
+-- vim.o.inccommand = 'split'
 vim.o.scrolloff = 10
 --
 vim.o.confirm = true
