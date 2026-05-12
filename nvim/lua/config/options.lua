@@ -24,7 +24,7 @@ vim.o.timeoutlen = 300
 -- vim.o.list = true
 -- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 --
--- vim.o.inccommand = 'split'
+vim.o.inccommand = 'split'
 vim.o.scrolloff = 10
 --
 vim.o.confirm = true
@@ -41,7 +41,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-vim.diagnostic.config {
-  virtual_text = true, -- Enable inline virtual text for diagnostics
-  -- Other options like severity_sort, float, etc. can be configured here
-}
+
+

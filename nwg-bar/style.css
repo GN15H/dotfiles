@@ -15,6 +15,7 @@ window {
 	border: solid;
 	border-width: 1px;
 	border-color: rgba(150, 100, 150, 1);
+  /* width: 500 px; */
 }
 
 /* Inner bar container, surrounds buttons */
