@@ -11,6 +11,7 @@ hl.bind(
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(variables.fileManager))
+hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("~/.config/waybar/launch.sh"))
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(variables.menu .. " --show drun -b"))
 hl.bind(mainMod .. " + escape", hl.dsp.exec_cmd(variables.power_menu))
 hl.bind(
