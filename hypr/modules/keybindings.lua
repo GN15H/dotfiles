@@ -1,5 +1,6 @@
 local variables = require("variables")
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
+local alt = "ALT" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(variables.terminal))
@@ -47,6 +48,10 @@ for i = 1, 10 do
 	hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
 	hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
+hl.bind(alt .. " + SHIFT + H", hl.dsp.window.move({ direction='left' }))
+hl.bind(alt .. " + SHIFT + L", hl.dsp.window.move({ direction='right' }))
+hl.bind(alt .. " + SHIFT + K", hl.dsp.window.move({ direction='up' }))
+hl.bind(alt .. " + SHIFT + J", hl.dsp.window.move({ direction='down' }))
 
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
