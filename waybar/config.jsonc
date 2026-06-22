@@ -41,7 +41,7 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "custom/powermenu":{
-        "format": "⊝",
+        "format": "⏻",
         "on-click": "exec ~/.scripts/powermenu.sh"
     },
 
