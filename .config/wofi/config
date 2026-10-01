@@ -1,9 +1,9 @@
 show=drun
 
-width=600
-height=350
-x=340
-y=150
+width=1120
+height=580
+x=400
+y=200
 location=center
 orientation=vertical
 content_halign=fill
