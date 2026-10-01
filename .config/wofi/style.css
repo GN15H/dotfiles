@@ -1,0 +1,88 @@
+#window {
+  background-color: transparent;
+  background: transparent;
+  border-radius: 0px;
+  border-color: #000;
+  border-width: 2px;
+}
+
+/**/
+#outer-box {
+  margin: 0px;
+  /* padding: 12px; */
+  border: solid;
+  border-width: 1px;
+  border-radius: 12px;
+  border-color: rgba(150, 100, 150, 1);
+  background-color: rgba(30, 30, 29, 0.8);
+  /* background-color: transparent; */
+}
+
+/**/
+#input {
+  margin-top: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding-left: 16px;
+  color: rgba(150, 100, 150, 1);
+  font-weight: bold;
+  background-color: rgba(50, 40, 50, 0.80);
+  border-radius: 12px;
+  border: solid;
+  border-width: 1px;
+  border-color: #aaa;
+  margin-bottom: 8px;
+}
+
+#input:focus {
+  background: rgba(60, 50, 60, 1);
+  color: rgba(220, 220, 220, 1);
+}
+
+#scroll {
+  margin-top: 8px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  border: 1px solid;
+  border-color: rgba(150, 100, 150, 1);
+  color: #cdd6f4;
+  font-weight: bold;
+  background-color: #1e1e2e;
+  border-radius: 10px;
+  padding: 1px 1px;
+  background: transparent;
+}
+
+#inner-box {
+  margin: 4px;
+}
+
+#entry {
+  margin: 0px 0px;
+  border-color: rgba(150, 100, 150, 1);
+  border-radius: 10px;
+  background-color: transparent;
+  background: transparent;
+  padding-right: 5px;
+}
+
+#entry:selected {
+  background-color: #89b4fa;
+  /* background: rgba(70, 40, 70, 1); */
+  background: rgba(220, 190, 200, 1);
+}
+
+#img {
+  margin-right: 5px;
+}
+
+#img:selected {
+  border-radius: 15px;
+}
+
+#text:selected {
+  color: #221020;
+  margin: 0px 0px;
+  border: none;
+}
