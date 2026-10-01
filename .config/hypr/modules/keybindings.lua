@@ -1,4 +1,4 @@
-local variables = require("variables")
+local variables = require("modules.variables")
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 local alt = "ALT" -- Sets "Windows" key as main modifier
 
@@ -12,7 +12,7 @@ hl.bind(
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(variables.fileManager))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("~/.config/waybar/launch.sh"))
+hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("~/.scripts/launch.sh && ~/.scripts/wallpaper-cycle.sh"))
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(variables.menu .. " --show drun -b"))
 hl.bind(mainMod .. " + escape", hl.dsp.exec_cmd(variables.power_menu))
 hl.bind(
@@ -56,6 +56,8 @@ hl.bind(alt .. " + SHIFT + J", hl.dsp.window.move({ direction='down' }))
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+hl.bind(mainMod .. " + D", hl.dsp.workspace.toggle_special("discord"))
+hl.bind(mainMod .. " + SHIFT + D", hl.dsp.window.move({ workspace = "special:discord" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
