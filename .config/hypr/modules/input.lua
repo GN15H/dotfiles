@@ -1,27 +1,28 @@
 hl.config({
-	input = {
-		kb_layout = "us",
-		kb_variant = "",
-		kb_model = "",
-		kb_options = "",
-		kb_rules = "",
+  input = {
+    kb_layout = "us",
+    kb_variant = "",
+    kb_model = "",
+    kb_options = "",
+    kb_rules = "",
 
-		follow_mouse = 2,
+    follow_mouse = 2,
 
-		sensitivity = -0.8, -- -1.0 - 1.0, 0 means no modification.
-		scroll_factor = 1.3,
+    force_no_accel = true,
+    sensitivity = 0.2, -- -1.0 - 1.0, 0 means no modification.
+    scroll_factor = 1.3,
 
-		touchpad = {
-			natural_scroll = true,
-			scroll_factor = 0.6,
-		},
-	},
+    touchpad = {
+      natural_scroll = true,
+      scroll_factor = 0.6,
+    },
+  },
 })
 
 hl.gesture({
-	fingers = 3,
-	direction = "horizontal",
-	action = "workspace",
+  fingers = 3,
+  direction = "horizontal",
+  action = "workspace",
 })
 
 -- -- Example per-device config

@@ -14,4 +14,3 @@ export PATH="$HOME/.local/bin:$PATH"
 
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
