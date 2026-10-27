@@ -3,6 +3,8 @@ font-family = "Consolas Nerd Font"
 font-size = 10
 # Ghostty automatically uses available bold and italic variants by default.
 
+gtk-single-instance = false
+
 # Window
 window-padding-x = 0
 window-padding-y = 0
