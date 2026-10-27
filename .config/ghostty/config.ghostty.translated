@@ -1,0 +1,52 @@
+# Font (translated from kitty.conf)
+font-family = "Consolas Nerd Font"
+font-size = 10
+# Ghostty automatically uses available bold and italic variants by default.
+
+# Window
+window-padding-x = 8
+window-padding-y = 8
+window-padding-balance = true
+window-decoration = true
+background-opacity = 0.95
+
+# Behavior
+confirm-close-surface = false
+copy-on-select = false
+clipboard-read = allow
+clipboard-write = allow
+
+# VSCode Dark theme (translated from dark-theme.auto.conf)
+background = #1e1e1e
+foreground = #cccccc
+selection-foreground = #cccccc
+selection-background = #264f78
+cursor-color = #ffffff
+cursor-text = #1e1e1e
+
+# ANSI color palette
+palette = 0=#000000
+palette = 1=#f14c4c
+palette = 2=#23d18b
+palette = 3=#f5f543
+palette = 4=#3b8eea
+palette = 5=#d670d6
+palette = 6=#29b8db
+palette = 7=#e5e5e5
+palette = 8=#666666
+palette = 9=#cd3131
+palette = 10=#0dbc79
+palette = 11=#e5e510
+palette = 12=#2472c8
+palette = 13=#bc3fbc
+palette = 14=#11a8cd
+palette = 15=#e5e5e5
+
+# Split panes
+keybind = ctrl+shift+d=new_split:right
+keybind = ctrl+shift+e=new_split:down
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+l=goto_split:right
+keybind = ctrl+shift+k=goto_split:top
+keybind = ctrl+shift+j=goto_split:bottom
+keybind = ctrl+shift+enter=toggle_split_zoom
