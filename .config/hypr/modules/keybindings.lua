@@ -21,8 +21,12 @@ hl.bind(
 		"cliphist list | wofi --dmenu --pre-display-cmd \"echo '%s' | cut -f 2\" | cliphist decode | wl-copy"
 	)
 )
-hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m window --clipboard-only"))
-hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
+-- hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m window --clipboard-only"))
+-- hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
+hl.bind(
+	"Print",
+	hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"')
+)
 
 -- Window manipulation
 hl.bind(mainMod .. " + W", hl.dsp.window.float({ action = "toggle" }))
@@ -48,10 +52,10 @@ for i = 1, 10 do
 	hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
 	hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
-hl.bind(alt .. " + SHIFT + H", hl.dsp.window.move({ direction='left' }))
-hl.bind(alt .. " + SHIFT + L", hl.dsp.window.move({ direction='right' }))
-hl.bind(alt .. " + SHIFT + K", hl.dsp.window.move({ direction='up' }))
-hl.bind(alt .. " + SHIFT + J", hl.dsp.window.move({ direction='down' }))
+hl.bind(alt .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
+hl.bind(alt .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
+hl.bind(alt .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
+hl.bind(alt .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
 
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
