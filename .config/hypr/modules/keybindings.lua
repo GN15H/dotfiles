@@ -23,10 +23,18 @@ hl.bind(
 )
 -- hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m window --clipboard-only"))
 -- hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
-hl.bind(
-	"Print",
-	hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"')
-)
+-- hl.bind(
+-- 	"Print",
+-- 	hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"')
+-- )
+hl.bind("Print", hl.plugin.hyprcapture.open)
+hl.bind(mainMod .. " + Print", hl.plugin.hyprcapture.open_editor)
+hl.bind(alt .. " + Print", function()
+	hl.plugin.hyprcapture.open("window")
+end)
+hl.bind(mainMod .. " + SHIFT + Print", function()
+	hl.plugin.hyprcapture.open("fullscreen")
+end)
 
 -- Window manipulation
 hl.bind(mainMod .. " + W", hl.dsp.window.float({ action = "toggle" }))
