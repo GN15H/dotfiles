@@ -3,7 +3,9 @@ font-family = "Consolas Nerd Font"
 font-size = 10
 # Ghostty automatically uses available bold and italic variants by default.
 
+gtk-custom-css = ~/.config/ghostty/tab-style.css
 gtk-single-instance = false
+window-title-font-family = "12"
 
 # Window
 window-padding-x = 0
@@ -17,6 +19,10 @@ confirm-close-surface = false
 copy-on-select = false
 clipboard-read = allow
 clipboard-write = allow
+
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
 
 # VSCode Dark theme (translated from dark-theme.auto.conf)
 background = #1e1e1e
