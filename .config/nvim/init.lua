@@ -8,4 +8,5 @@ vim.lsp.enable {
   'pyright',
   'cssls',
   'terraformls',
+  'prismals',
 }

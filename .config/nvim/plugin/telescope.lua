@@ -10,20 +10,22 @@ vim.api.nvim_create_autocmd('PackChanged', {
 })
 
 -- 2. Plugin list (replaces the spec + dependencies + cond/enabled)
-local gh = function(repo) return 'https://github.com/' .. repo end
+local gh = function(repo)
+  return 'https://github.com/' .. repo
+end
 
 local plugins = {
-  gh('nvim-lua/plenary.nvim'),
-  { src = gh('nvim-telescope/telescope.nvim'), version = 'v0.2.0' },
-  gh('nvim-telescope/telescope-ui-select.nvim'),
+  gh 'nvim-lua/plenary.nvim',
+  { src = gh 'nvim-telescope/telescope.nvim', version = 'v0.2.0' },
+  gh 'nvim-telescope/telescope-ui-select.nvim',
 }
 
-if vim.fn.executable('make') == 1 then
-  table.insert(plugins, gh('nvim-telescope/telescope-fzf-native.nvim'))
+if vim.fn.executable 'make' == 1 then
+  table.insert(plugins, gh 'nvim-telescope/telescope-fzf-native.nvim')
 end
 
 if vim.g.have_nerd_font then
-  table.insert(plugins, gh('nvim-tree/nvim-web-devicons'))
+  table.insert(plugins, gh 'nvim-tree/nvim-web-devicons')
 end
 
 vim.pack.add(plugins)
@@ -51,6 +53,7 @@ vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' }
 vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
 vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 vim.keymap.set('n', 'grd', builtin.lsp_definitions, { desc = '[G]oto [D]efinition' })
+vim.keymap.set('n', 'grr', builtin.lsp_references, { desc = '[G]oto [R]eferences' })
 
 vim.keymap.set('n', '<leader>/', function()
   builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
