@@ -17,6 +17,11 @@
       "rev": "070a5d7b985546cc57e1fc61e5bc507fecac6045",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
+    "harpoon": {
+      "rev": "87b1a3506211538f460786c23f98ec63ad9af4e5",
+      "src": "https://github.com/ThePrimeagen/harpoon",
+      "version": "'harpoon2'"
+    },
     "indent-blankline.nvim": {
       "rev": "f1e186e44d3b7f9ae918008e2c28ce37c6023d2d",
       "src": "https://github.com/lukas-reineke/indent-blankline.nvim"
