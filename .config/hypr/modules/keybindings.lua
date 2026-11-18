@@ -21,12 +21,7 @@ hl.bind(
 		"cliphist list | wofi --dmenu --pre-display-cmd \"echo '%s' | cut -f 2\" | cliphist decode | wl-copy"
 	)
 )
--- hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m window --clipboard-only"))
--- hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
--- hl.bind(
--- 	"Print",
--- 	hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"')
--- )
+
 hl.bind("Print", hl.plugin.hyprcapture.open)
 hl.bind(mainMod .. " + Print", hl.plugin.hyprcapture.open_editor)
 hl.bind(alt .. " + Print", function()
